@@ -38,5 +38,11 @@ pipeline{ //IP01 Pipeline - EGC
                 sh 'npm test' 
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                //Deployment onto server
+            }
+        }
     }
 }
