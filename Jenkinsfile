@@ -4,7 +4,7 @@ pipeline{ //IP01 Pipeline - EGC
         nodejs 'nodejs'
     }
     stages{
-        stage('Clone Repository'){
+        stage('Clone Repository 1'){
             steps{
                 git 'https://github.com/egcharchi/90days-Jenkins'
             }
