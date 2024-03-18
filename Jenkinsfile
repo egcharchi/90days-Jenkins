@@ -4,7 +4,7 @@ pipeline{ /
         nodejs 'nodejs'
     }
     stages{
-        stage('Clone Repository 1'){
+        stage('Clone Repository'){
             steps{
                 git 'https://github.com/egcharchi/90days-Jenkins.git'
             }
