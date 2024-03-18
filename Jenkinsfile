@@ -1,4 +1,4 @@
-pipeline{ //IP01 Pipeline - EGC
+pipeline{ /
     agent any
     tools{
         nodejs 'nodejs'
@@ -6,18 +6,18 @@ pipeline{ //IP01 Pipeline - EGC
     stages{
         stage('Clone Repository 1'){
             steps{
-                git 'https://github.com/egcharchi/90days-Jenkins'
+                git 'https://github.com/egcharchi/90days-Jenkins.git'
             }
 
         }
-        stage('Get latest commit') {
-            steps {
-                sh '''
-                   export COMMIT=$(git log --oneline | awk '{print $1}' | head -n 1)
-                   echo $COMMIT
-                   '''
-            }
-        }
+        //stage('Get latest commit') {
+          //  steps {
+            //    sh '''
+                //   export COMMIT=$(git log --oneline | awk '{print $1}' | head -n 1)
+                //   echo $COMMIT
+                //   '''
+           // }
+        //}
         stage('Build'){
             steps{
                 //Building - Installation of dependencies
